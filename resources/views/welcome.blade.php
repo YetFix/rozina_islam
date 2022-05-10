@@ -1,7 +1,7 @@
 @extends('frontend.master')
 
 @section('content')
- <!-- ======= Hero Section ======= -->
+
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="hero d-flex align-items-center">
 
@@ -236,7 +236,8 @@
       </div>
 
     </div>
-
+  </section>
+<!-- End portfolio Section -->
 
 
 

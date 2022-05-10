@@ -16,8 +16,23 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/about', function () {
+    return view('frontend.about');
+});
+Route::get('/contact', function () {
+    return view('frontend.contact');
+});
+Route::get('/news', function () {
+    return view('frontend.news');
+});
+Route::get('/blogs', function () {
+    return view('frontend.blogs');
+});
+Route::get('/gallery', function () {
+    return view('frontend.gallery');
+});
 Route::get('/blog', function () {
-    return view('blog');
+    return view('frontend.blog');
 })->name('single');
 
 Auth::routes();
