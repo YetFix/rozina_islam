@@ -2,30 +2,74 @@
 
 @section('content')
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero d-flex align-items-center">
+<br>
+<br>
+<section id="hero" class="d-flex align-items-stretch">
 
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center">
-          <h1 data-aos="fade-up">We offer modern solutions for growing your business</h1>
-          <h2 data-aos="fade-up" data-aos-delay="400">We are team of talented designers making websites with Bootstrap</h2>
-          <div data-aos="fade-up" data-aos-delay="600">
-            <div class="text-center text-lg-start">
-              <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                <span>Get To Know Me</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7 d-flex flex-column justify-content-center" >
+        <div class="owl-carousel">
+          <div> <img src="{{asset('frontend/assets/img/blog/blog-1.jpg')}}" style="height: 354px;width:770px" alt=""></div>
+          <div> <img src="{{asset('frontend/assets/img/blog/blog-2.jpg')}}" style="height: 354px"  alt=""></div>
+          <div> <img src="{{asset('frontend/assets/img/blog/blog-3.jpg')}}" style="height: 354px" alt=""></div>
         </div>
-        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-          <img src="{{asset('frontend/assets/img/hero-img.png')}}" class="img-fluid" alt="">
+      </div>
+      <div class="col-lg-5 d-flex flex-column justify-content-center" style="height: 354px">
+        <b><p data-aos="fade-up" class="aos-init aos-animate">INVESTIGATIVE REPORTER</p></b>
+        <h4>Special Correspondent :
+          The Daily Prothom Alo</h4>
+        <ul>
+          <li>Bangladesh Probashi Odhikar Porishad</li>
+          <li>International Visitor Leadership Program</li>
+          <li>UNESCO Club Journalism Award</li>
+          <li>Appreciation from Syracuse University</li>
+          <li>বদলের সহযোগী-২০১৩</li>
+        </ul>
+        <div data-aos="fade-up" data-aos-delay="600">
+          <div class="text-center text-lg-start">
+            <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+              <span>Get To Know Me</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </section><!-- End Hero -->
- 
+  </div>
+
+</section>
+<!-- ======= About Section ======= -->
+<section id="about" class="about mt-0">
+
+  <div class="container" data-aos="fade-up">
+    <div class="row gx-0">
+
+      <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="content">
+          <h3>Who Am I</h3>
+          <h2>রোজিনা ইসলাম</h2>
+          <p>
+            রোজিনা ইসলাম হলেন একজন বাংলাদেশী অনুসন্ধানী সাংবাদিক।তিনি বাংলাদেশী দৈনিক প্রথম আলোর জ্যেষ্ঠ প্রতিবেদক যিনি ২০২১ সালের ১৮ মে দুর্নীতির অনুসন্ধান করতে গিয়ে রাষ্ট্রীয় গোপন নথি সরানোর অভিযোগে গ্রেফতার হন। সংবাদ সংস্থা ও সংগঠনগুলোর দাবি অনুযায়ী, রোজিনা সংবাদ সংগ্রহে বাংলাদেশ সচিবালয়ের স্বাস্থ্য বিভাগে গেলে সরকারি কর্মকর্তারা তাকে ৫ ঘণ্টা আটক রাখে ও হেনস্থা করে। এইসবের ছবি ও ভিডিও সংবাদমাধ্যমে ব্যাপক আলোচিত হয়। রোজিনাকে হেনস্তা ও গ্রেফতারের ঘটনায় উদ্বেগ প্রকাশ করে জাতিসংঘ বিবৃতি দেয়। বাংলাদেশে বিভিন্ন সময়ে অনুন্ধানী সাংবাদিকতা ও দুর্নীতি বিষয়ক একাধিক আলোচিত প্রতিবেদনের জন্যে তিনি পরিচিতি পান।
+          </p>
+          <div class="text-center text-lg-start">
+            <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+              <span>Read More</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+        <img src="{{asset('frontend/assets/img/about.jpg')}}" class="img-fluid" alt="">
+      </div>
+
+    </div>
+  </div>
+
+</section><!-- End About Section -->
+
 
   <!-- ======= Values Section ======= -->
   <section id="values" class="values">
@@ -43,7 +87,6 @@
           <a href="{{route('single')}}">
             <div class="box">
                 <img src="{{asset('frontend/assets/img/values-1.png')}}" class="img-fluid" alt="">
-                <h3>Ad cupiditate sed est odio</h3>
                 <p>Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id.</p>
             </div>
           </a>
@@ -53,87 +96,30 @@
             <a href="{{route('single')}}">
           <div class="box">
             <img src="{{asset('frontend/assets/img/values-2.png')}}" class="img-fluid" alt="">
-            <h3>Voluptatem voluptatum alias</h3>
+          
             <p>Repudiandae amet nihil natus in distinctio suscipit id. Doloremque ducimus ea sit non.</p>
           </div>
             </a>
         </div>
-
+   
         <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
             <a href="{{route('single')}}">
           <div class="box">
             <img src="{{asset('frontend/assets/img/values-3.png')}}" class="img-fluid" alt="">
-            <h3>Fugit cupiditate alias nobis.</h3>
+           
             <p>Quam rem vitae est autem molestias explicabo debitis sint. Vero aliquid quidem commodi.</p>
           </div>
             </a>
         </div>
 
       </div>
-      <div class="row">
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <a href="{{route('single')}}">
-            <div class="box">
-              <img src="{{asset('frontend/assets/img/values-1.png')}}" class="img-fluid" alt="">
-              <h3>Ad cupiditate sed est odio</h3>
-              <p>Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id.</p>
-            </div>
-            </a>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
-            <div class="box">
-              <img src="{{asset('frontend/assets/img/values-2.png')}}" class="img-fluid" alt="">
-              <h3>Voluptatem voluptatum alias</h3>
-              <p>Repudiandae amet nihil natus in distinctio suscipit id. Doloremque ducimus ea sit non.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
-            <div class="box">
-              <img src="{{asset('frontend/assets/img/values-3.png')}}" class="img-fluid" alt="">
-              <h3>Fugit cupiditate alias nobis.</h3>
-              <p>Quam rem vitae est autem molestias explicabo debitis sint. Vero aliquid quidem commodi.</p>
-            </div>
-          </div>
-
-        </div>
+     
 
     </div>
 
   </section><!-- End Values Section -->
 
-   <!-- ======= About Section ======= -->
-   <section id="about" class="about">
-
-    <div class="container" data-aos="fade-up">
-      <div class="row gx-0">
-
-        <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-          <div class="content">
-            <h3>Who Am I</h3>
-            <h2>Expedita voluptas omnis cupiditate totam eveniet nobis sint iste. Dolores est repellat corrupti reprehenderit.</h2>
-            <p>
-              Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit voluptatum nam et est corrupti.
-            </p>
-            <div class="text-center text-lg-start">
-              <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
-                <span>Read More</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-          <img src="{{asset('frontend/assets/img/about.jpg')}}" class="img-fluid" alt="">
-        </div>
-
-      </div>
-    </div>
-
-  </section><!-- End About Section -->
+   
 
 
   <!-- ======= Portfolio Section ======= -->

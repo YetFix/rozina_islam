@@ -7,7 +7,23 @@
 <script src="{{asset('frontend/assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
 <script src="{{asset('frontend/assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
 <script src="{{asset('frontend/assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
-<script src="{{asset('frontend/assets/vendor/php-email-form/validate.js')}}"></script>
+
 
 <!-- Template Main JS File -->
 <script src="{{asset('frontend/assets/js/main.js')}}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="{{asset('frontend/assets/js/owl.carousel.min.js')}}"></script>
+<script>
+ var owl = $('.owl-carousel');
+owl.owlCarousel({
+  items:1,
+    loop:true,
+    margin:10,
+    autoplay:true,
+    autoplayTimeout:3000,
+    autoplayHoverPause:true,
+    center: true,
+    autoHeight: true,
+  
+});
+</script>

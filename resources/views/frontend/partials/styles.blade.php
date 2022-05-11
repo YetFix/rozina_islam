@@ -28,7 +28,8 @@
     <link href="{{asset('frontend/assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
   
     <!-- Template Main CSS File -->
-    <link href="{{asset('frontend/assets/css/style.css')}}" rel="stylesheet">
-  
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/style.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/owl.theme.default.min.css')}}">
    
   </head>

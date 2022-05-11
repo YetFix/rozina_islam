@@ -1,8 +1,9 @@
 @extends('frontend.master')
 
 @section('content')
-<br>
-<br>
+<br/>
+<br/>
+
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
 
@@ -32,5 +33,7 @@
           </div>
         </div>
     
-      </section><!-- End About Section -->
+    </section>
+    <!-- End About Section -->
+    
 @endsection

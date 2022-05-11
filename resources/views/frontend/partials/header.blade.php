@@ -4,13 +4,23 @@
       <a href="/" class="logo d-flex align-items-center">
         <img src="{{asset('frontend/assets/img/logo.png')}}" alt="">
         <span>Rozina Islam</span>
+     
       </a>
-
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto" href="/">Home</a></li>
           <li><a class="nav-link scrollto" href="/about">About</a></li>
-          <li><a href="/news">News</a></li>
+          <li class="dropdown"><a href="/news"><span>News</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">NATIONAL</a></li>
+              <li><a href="#">MINISTRY OF LIBERATION WAR</a></li>
+              <li><a href="#">MINISTRY OF PUBLIC HEALTH</a></li>
+              <li><a href="#">MINISTRY OH HOME AFFAIRS</a></li>
+              <li><a href="#">Others</a></li>
+            </ul>
+          </li>
+          <li><a href="/awards">Awards</a></li>
+          <li><a href="/certificates">Certificates</a></li>
           <li><a href="/blogs">Blog</a></li>
           <li><a class="nav-link scrollto" href="/contact">Contact</a></li>
           <li><a class="nav-link scrollto" href="/gallery">Gallery</a></li>
@@ -20,4 +30,5 @@
       </nav><!-- .navbar -->
 
     </div>
+   
   </header>
