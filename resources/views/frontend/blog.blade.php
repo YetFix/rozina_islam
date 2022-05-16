@@ -2,18 +2,8 @@
 
 @section('content')
   <!-- ======= Breadcrumbs ======= -->
-  <section class="breadcrumbs">
-    <div class="container">
-
-      <ol>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="blog.html">News</a></li>
-        <li>Recent News</li>
-      </ol>
-     
-
-    </div>
-  </section><!-- End Breadcrumbs -->
+  <br>
+  <br>
     <!-- ======= Blog Single Section ======= -->
     <section id="blog" class="blog">
       <div class="container" data-aos="fade-up">
@@ -49,12 +39,6 @@
                 <p>
                   Sit repellat hic cupiditate hic ut nemo. Quis nihil sunt non reiciendis. Sequi in accusamus harum vel aspernatur. Excepturi numquam nihil cumque odio. Et voluptate cupiditate.
                 </p>
-
-                <blockquote>
-                  <p>
-                    Et vero doloremque tempore voluptatem ratione vel aut. Deleniti sunt animi aut. Aut eos aliquam doloribus minus autem quos.
-                  </p>
-                </blockquote>
 
                 <p>
                   Sed quo laboriosam qui architecto. Occaecati repellendus omnis dicta inventore tempore provident voluptas mollitia aliquid. Id repellendus quia. Asperiores nihil magni dicta est suscipit perspiciatis. Voluptate ex rerum assumenda dolores nihil quaerat.
@@ -97,7 +81,7 @@
 
             </article><!-- End blog entry -->
 
-            <div class="blog-author d-flex align-items-center">
+            {{-- <div class="blog-author d-flex align-items-center">
               <img src="{{asset('frontend/assets/img/blog/blog-author.jpg')}}" class="rounded-circle float-left" alt="">
               <div>
                 <h4>Jane Smith</h4>
@@ -110,7 +94,7 @@
                   Itaque quidem optio quia voluptatibus dolorem dolor. Modi eum sed possimus accusantium. Quas repellat voluptatem officia numquam sint aspernatur voluptas. Esse et accusantium ut unde voluptas.
                 </p>
               </div>
-            </div><!-- End blog author bio -->
+            </div><!-- End blog author bio --> --}}
 
          
 
@@ -120,13 +104,7 @@
 
             <div class="sidebar">
 
-              <h3 class="sidebar-title">Search</h3>
-              <div class="sidebar-item search-form">
-                <form action="">
-                  <input type="text">
-                  <button type="submit"><i class="bi bi-search"></i></button>
-                </form>
-              </div><!-- End sidebar search formn-->
+          
 
               <h3 class="sidebar-title">Categories</h3>
               <div class="sidebar-item categories">
@@ -144,19 +122,19 @@
               <div class="sidebar-item recent-posts">
                 <div class="post-item clearfix">
                   <img src="{{asset('frontend/assets/img/blog/blog-recent-1.jpg')}}" alt="">
-                  <h4><a href="blog-single.html">Nihil blanditiis at in nihil autem</a></h4>
+                  <h4><a href="/post">Nihil blanditiis at in nihil autem</a></h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
 
                 <div class="post-item clearfix">
                   <img src="{{asset('frontend/assets/img/blog/blog-recent-2.jpg')}}" alt="">
-                  <h4><a href="blog-single.html">Quidem autem et impedit</a></h4>
+                  <h4><a href="/post">Quidem autem et impedit</a></h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
 
                 <div class="post-item clearfix">
                   <img src="{{asset('frontend/assets/img/blog/blog-recent-3.jpg')}}" alt="">
-                  <h4><a href="blog-single.html">Id quia et et ut maxime similique occaecati ut</a></h4>
+                  <h4><a href="/post">Id quia et et ut maxime similique occaecati ut</a></h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
 

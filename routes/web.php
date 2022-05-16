@@ -28,13 +28,19 @@ Route::get('/news', function () {
 Route::get('/blogs', function () {
     return view('frontend.blogs');
 });
-Route::get('/gallery', function () {
-    return view('frontend.gallery');
+
+Route::get('/awards', function () {
+    return view('frontend.awards');
+});
+Route::get('/certificates', function () {
+    return view('frontend.awards');
 });
 Route::get('/blog', function () {
     return view('frontend.blog');
 })->name('single');
-
+Route::get('/post', function () {
+    return view('frontend.blog');
+})->name('single_news');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

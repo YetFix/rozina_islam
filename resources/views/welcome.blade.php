@@ -5,7 +5,7 @@
 <br>
 <br>
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero d-flex align-items-center">
+  {{-- <section id="hero" class="hero d-flex align-items-center">
 
     <div class="container">
       <div class="row">
@@ -35,7 +35,7 @@
       </div>
     </div>
 
-  </section>
+  </section> --}}
   <!-- End Hero -->
 <!-- ======= About Section ======= -->
 <section id="about" class="about mt-0">
@@ -68,162 +68,246 @@
 
 </section><!-- End About Section -->
 
+<h1 style="text-align: center">Recent News</h1>
+ <!-- ======= Blog Section ======= -->
+ <section id="blog" class="blog">
+  <div class="container" data-aos="fade-up">
 
-  <!-- ======= Values Section ======= -->
-  <section id="values" class="values">
+    <div class="row">
 
-    <div class="container" data-aos="fade-up">
+      <div class="col-lg-8 entries">
 
-      <header class="section-header">
-        <h2>Recent News</h2>
-      
-      </header>
-
-      <div class="row">
-
-        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+       <div class="row">
+         <div class="col-lg-6">
           <a href="/blog">
-            <div class="box">
-                <img src="{{asset('frontend/assets/img/values-1.png')}}" class="img-fluid" alt="">
-                <p>Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id.</p>
-            </div>
-          </a>
-        </div>
+            <article class="entry">
 
-        <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
-            <a href="{{route('single')}}">
-          <div class="box">
-            <img src="{{asset('frontend/assets/img/values-2.png')}}" class="img-fluid" alt="">
-          
-            <p>Repudiandae amet nihil natus in distinctio suscipit id. Doloremque ducimus ea sit non.</p>
-          </div>
-            </a>
-        </div>
-   
-        <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
-            <a href="{{route('single')}}">
-          <div class="box">
-            <img src="{{asset('frontend/assets/img/values-3.png')}}" class="img-fluid" alt="">
-           
-            <p>Quam rem vitae est autem molestias explicabo debitis sint. Vero aliquid quidem commodi.</p>
-          </div>
-            </a>
-        </div>
-
-      </div>
-     
-
-    </div>
-
-  </section><!-- End Values Section -->
-
-   
-
-
-  <!-- ======= Portfolio Section ======= -->
-  <section id="portfolio" class="portfolio">
-
-    <div class="container" data-aos="fade-up">
-
-      <header class="section-header">
-        <h2>Gallery</h2>
-      </header>
-
+              <div class="entry-img">
+                <img src="frontend/assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+              </div>
+              <p style="color: black"> Bangladesh: Drop charges against journalist Rozina Islam</p>
+            
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                </ul>
+              </div>
     
-
-      <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="{{asset('frontend/assets/img/portfolio/portfolio-1.jpg')}}" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <div class="portfolio-links">
-                <a href="{{asset('frontend/assets/img/portfolio/portfolio-1.jpg')}}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+              <div class="entry-content">
+  
+                <div class="read-more">
+                  <a href="/blog">Read More</a>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
+    
+            </article>
+          </a>
+         </div>
+         <div class="col-lg-6">
+          <a href="/blog">
+            <article class="entry">
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src="{{asset('frontend/assets/img/portfolio/portfolio-2.jpg')}}" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <div class="portfolio-links">
-                <a href="{{asset('frontend/assets/img/portfolio/portfolio-2.jpg')}}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+              <div class="entry-img">
+                <img src="frontend/assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
               </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="{{asset('frontend/assets/img/portfolio/portfolio-3.jpg')}}" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <div class="portfolio-links">
-                <a href="{{asset('frontend/assets/img/portfolio/portfolio-3.jpg')}}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+              <p style="color: black"> Bangladesh: Drop charges against journalist Rozina Islam</p>
+            
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                </ul>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-wrap">
-            <img src="{{asset('frontend/assets/img/portfolio/portfolio-4.jpg')}}" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
-              <div class="portfolio-links">
-                <a href="{{asset('frontend/assets/img/portfolio/portfolio-4.jpg')}}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 2"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+    
+              <div class="entry-content">
+  
+                <div class="read-more">
+                  <a href="/blog">Read More</a>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
+    
+            </article>
+          </a>
+         </div>
+         <div class="col-lg-6">
+          <a href="/blog">
+            <article class="entry">
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src="{{asset('frontend/assets/img/portfolio/portfolio-5.jpg')}}" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
-              <div class="portfolio-links">
-                <a href="{{asset('frontend/assets/img/portfolio/portfolio-5.jpg')}}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 2"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+              <div class="entry-img">
+                <img src="frontend/assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
               </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="{{asset('frontend/assets/img/portfolio/portfolio-6.jpg')}}" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <div class="portfolio-links">
-                <a href="{{asset('frontend/assets/img/portfolio/portfolio-6.jpg')}}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+              <p style="color: black"> Bangladesh: Drop charges against journalist Rozina Islam</p>
+            
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                </ul>
               </div>
-            </div>
-          </div>
-        </div>
+    
+              <div class="entry-content">
+  
+                <div class="read-more">
+                  <a href="/blog">Read More</a>
+                </div>
+              </div>
+    
+            </article>
+          </a>
+         </div>
+         <div class="col-lg-6">
+          <a href="/blog">
+            <article class="entry">
 
-      </div>
+              <div class="entry-img">
+                <img src="frontend/assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+              </div>
+              <p style="color: black"> Bangladesh: Drop charges against journalist Rozina Islam</p>
+            
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                </ul>
+              </div>
+    
+              <div class="entry-content">
+  
+                <div class="read-more">
+                  <a href="/blog">Read More</a>
+                </div>
+              </div>
+    
+            </article>
+          </a>
+         </div>
+
+       </div>
+
+      </div><!-- End blog entries list -->
+
+      <div class="col-lg-4">
+
+        <div class="sidebar">
+          <h3 class="sidebar-title">Categories</h3>
+          <div class="sidebar-item categories">
+            <ul>
+              <li><a href="#">General <span>(25)</span></a></li>
+              <li><a href="#">Lifestyle <span>(12)</span></a></li>
+              <li><a href="#">Travel <span>(5)</span></a></li>
+              <li><a href="#">Design <span>(22)</span></a></li>
+              <li><a href="#">Creative <span>(8)</span></a></li>
+              <li><a href="#">Educaion <span>(14)</span></a></li>
+            </ul>
+          </div><!-- End sidebar categories-->
+
+          <h3 class="sidebar-title">Recent Posts</h3>
+          <div class="sidebar-item recent-posts">
+            <div class="post-item clearfix">
+              <img src="frontend/assets/img/blog/blog-recent-1.jpg" alt="">
+              <h4><a href="/post">Nihil blanditiis at in nihil autem</a></h4>
+              <time datetime="2020-01-01">Jan 1, 2020</time>
+            </div>
+
+            <div class="post-item clearfix">
+              <img src="frontend/assets/img/blog/blog-recent-2.jpg" alt="">
+              <h4><a href="/post">Quidem autem et impedit</a></h4>
+              <time datetime="2020-01-01">Jan 1, 2020</time>
+            </div>
+
+            <div class="post-item clearfix">
+              <img src="frontend/assets/img/blog/blog-recent-3.jpg" alt="">
+              <h4><a href="/post">Id quia et et ut maxime similique occaecati ut</a></h4>
+              <time datetime="2020-01-01">Jan 1, 2020</time>
+            </div>
+
+          </div><!-- End sidebar recent posts-->
+
+          <h3 class="sidebar-title">Tags</h3>
+          <div class="sidebar-item tags">
+            <ul>
+              <li><a href="#">App</a></li>
+              <li><a href="#">IT</a></li>
+              <li><a href="#">Business</a></li>
+              <li><a href="#">Mac</a></li>
+              <li><a href="#">Design</a></li>
+              <li><a href="#">Office</a></li>
+              <li><a href="#">Creative</a></li>
+              <li><a href="#">Studio</a></li>
+              <li><a href="#">Smart</a></li>
+              <li><a href="#">Tips</a></li>
+              <li><a href="#">Marketing</a></li>
+            </ul>
+          </div><!-- End sidebar tags-->
+
+        </div><!-- End sidebar -->
+
+      </div><!-- End blog sidebar -->
 
     </div>
-  </section>
-<!-- End portfolio Section -->
+
+  </div>
+</section>
+<!-- End Blog Section -->
+
+<h1 style="text-align: center">Recent Awards</h1>   
+<section id="portfolio" class="portfolio">
+
+  <div class="container" data-aos="fade-up">
+
+  <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+      <div class="portfolio-wrap">
+          <img src="frontend/assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+          <h4>Award 1</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, maiores?</p>
+          <div class="portfolio-links">
+              <a href="frontend/assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 1"><i class="bi bi-plus"></i></a>
+              <a href="#" title="More Details"><i class="bi bi-link"></i></a>
+          </div>
+          </div>
+      </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+      <div class="portfolio-wrap">
+          <img src="frontend/assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+          <h4>Award 2</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, maiores?</p>
+          <div class="portfolio-links">
+              <a href="frontend/assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 3"><i class="bi bi-plus"></i></a>
+              <a href="#" title="More Details"><i class="bi bi-link"></i></a>
+          </div>
+          </div>
+      </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+      <div class="portfolio-wrap">
+          <img src="frontend/assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+          <h4>Award 3</h4>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, praesentium.</p>
+          <div class="portfolio-links">
+              <a href="frontend/assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
+              <a href="#" title="More Details"><i class="bi bi-link"></i></a>
+          </div>
+          </div>
+      </div>
+      </div>
+
+  </div>
+
+  </div>
+
+</section>
 
 
+{{-- 
 
 
 
@@ -270,7 +354,7 @@
 
     </div>
 
-  </section><!-- End Recent Blog Posts Section -->
+  </section><!-- End Recent Blog Posts Section --> --}}
 
   <!-- ======= Contact Section ======= -->
   <section id="contact" class="contact">

@@ -29,7 +29,7 @@
   
     <!-- Template Main CSS File -->
     <link rel="stylesheet" href="{{asset('frontend/assets/css/style.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('frontend/assets/css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/assets/css/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/variables.css')}}" rel="stylesheet">
+  
    
   </head>
