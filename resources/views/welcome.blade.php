@@ -4,41 +4,39 @@
 
 <br>
 <br>
-<section id="hero" class="d-flex align-items-stretch">
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center">
 
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-7 d-flex flex-column justify-content-center" >
-        <div class="owl-carousel">
-          <div> <img src="{{asset('frontend/assets/img/blog/blog-1.jpg')}}" style="height: 354px;width:770px" alt=""></div>
-          <div> <img src="{{asset('frontend/assets/img/blog/blog-2.jpg')}}" style="height: 354px"  alt=""></div>
-          <div> <img src="{{asset('frontend/assets/img/blog/blog-3.jpg')}}" style="height: 354px" alt=""></div>
-        </div>
-      </div>
-      <div class="col-lg-5 d-flex flex-column justify-content-center" style="height: 354px">
-        <b><p data-aos="fade-up" class="aos-init aos-animate">INVESTIGATIVE REPORTER</p></b>
-        <h4>Special Correspondent :
-          The Daily Prothom Alo</h4>
-        <ul>
-          <li>Bangladesh Probashi Odhikar Porishad</li>
-          <li>International Visitor Leadership Program</li>
-          <li>UNESCO Club Journalism Award</li>
-          <li>Appreciation from Syracuse University</li>
-          <li>বদলের সহযোগী-২০১৩</li>
-        </ul>
-        <div data-aos="fade-up" data-aos-delay="600">
-          <div class="text-center text-lg-start">
-            <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-              <span>Get To Know Me</span>
-              <i class="bi bi-arrow-right"></i>
-            </a>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-end">
+          <h1 data-aos="fade-up">Rozina Islam</h1>
+           <b><h2 data-aos="fade-up">Special Correspondent, <br></b>
+            The Daily Prothom Alo</h2>
+              <br>
+              <li style="font-size: 25px;">Bangladesh Probashi Odhikar Porishad</li>
+              <li style="font-size: 25px;">International Visitor Leadership Program</li>
+              <li style="font-size: 25px;">UNESCO Club Journalism Award</li>
+              <li style="font-size: 25px;">Appreciation from Syracuse University</li>
+              <li style="font-size: 25px;">বদলের সহযোগী-২০১৩</li>
+         
+          <div data-aos="fade-up" data-aos-delay="600">
+            <div class="text-center text-lg-start">
+              <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Get Started</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
           </div>
+        </div>
+        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+          <img src="{{asset('frontend/assets/img/hero-img.png')}}" class="img-fluid" alt="">
         </div>
       </div>
     </div>
-  </div>
 
-</section>
+  </section>
+  <!-- End Hero -->
 <!-- ======= About Section ======= -->
 <section id="about" class="about mt-0">
 
@@ -84,7 +82,7 @@
       <div class="row">
 
         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <a href="{{route('single')}}">
+          <a href="/blog">
             <div class="box">
                 <img src="{{asset('frontend/assets/img/values-1.png')}}" class="img-fluid" alt="">
                 <p>Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id.</p>
