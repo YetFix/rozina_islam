@@ -49,23 +49,16 @@
             </ul>
           </div>
 
-          <div class="col-lg-3 col-6 footer-links">
-            <h4>Latest  Posts</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Women in focus: Standing up to attacks and defending the rights of all</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Women in focus: Standing up to attacks and defending the rights of all</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Women in focus: Standing up to attacks and defending the rights of all</a></li>
-           
-            </ul>
-          </div>
+         
 
           <div class="col-lg-2 col-md-12 footer-contact text-center text-md-start">
             <h4>Contact Us</h4>
             <p>
-              A108 Street <br>
-              Kawran Bazar, Dhaka<br>
-              Bangladesh <br><br>
-             
+              5-D,Dhaka <br>
+              Dhaka-1214<br>
+              Bangladesh<br><br>
+              <strong>Phone:</strong> +8801712120552<br>
+              <strong>Email:</strong>prothomalo2022@gmail.com<br>
             </p>
 
           </div>
