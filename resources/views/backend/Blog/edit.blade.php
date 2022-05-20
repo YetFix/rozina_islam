@@ -10,7 +10,7 @@
             <div class="page-breadcrumb bg-white">
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                       <a href='/allnews' class="btn btn-primary mb-3">Back</a>
+                       <a href='/blogs' class="btn btn-primary mb-3">Back</a>
                     </div>
                    
                 </div>
@@ -29,29 +29,29 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="white-box">
-                            <h3 class="box-title">Edit News</h3>
+                            <h3 class="box-title">Edit Blogs</h3>
                             <div class="table-responsive">
                             <table class="table text-nowrap">
-                                <form action="{{route('ns.update',$news->id)}}" method="POST" enctype="multipart/form-data">
+                                <form action="{{route('bl.update',$blog->id)}}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     @method('PUT')
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">News Title</label>
+                                        <label for="exampleInputEmail1">Blog Title</label>
                                         <input type="text" class="form-control" id="name" aria-describedby="emailHelp"
-                                            name="name" placeholder="Enter award name" value="{{$news->title}}" required>
+                                            name="name" placeholder="Enter award name" value="{{$blog->title}}" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">News Description</label>
+                                        <label for="exampleInputEmail1">Blog Description</label>
                                        
-                                            <textarea class="form-control" name="desc" id="desc" cols="30" rows="10" >{{$news->desc}}</textarea>
+                                            <textarea class="form-control" name="desc" id="desc" cols="30" rows="10" >{{$blog->desc}}</textarea>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleFormControlSelect1">Select News Type</label>
+                                        <label for="exampleFormControlSelect1">Select Blog Type</label>
                                         <select class="form-control" id="select" name="type">
-                                            <option @if($news->type==='Bengali')
+                                            <option @if($blog->type==='Bengali')
                                             selected="selected"
                                             @endif>Bengali</option>
-                                          <option @if($news->type==='English')
+                                          <option @if($blog->type==='English')
                                             selected="selected"
                                             @endif>English</option>
                                         </select>
@@ -60,16 +60,16 @@
                                         <label for="exampleFormControlSelect1">Select Category</label>
                                         <select class="form-control" id="category" name="category">
                                             @foreach($categories as $category)
-                                                <option value="{{$category->id}}" {{($news->category->id==$category->id)? "selected":""}}>{{$category->name}}</option>
+                                                <option value="{{$category->id}}" {{($blog->category->id==$category->id)? "selected":""}}>{{$category->name}}</option>
                                             @endforeach
                                            
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="news">News Image</label><br/>
+                                        <label for="news">Blog Image</label><br/>
                                         <p>* For Best Quality image size should be 800X600 </p>
-                                        <input type="file" class="form-control-file" id="news"
-                                         name="news"> 
+                                        <input type="file" class="form-control-file" id="blog"
+                                         name="blog"> 
                                     </div>
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                 </form>

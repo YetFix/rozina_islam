@@ -147,110 +147,34 @@
       <div class="col-lg-8 entries">
 
        <div class="row">
-         <div class="col-lg-6">
-          <a href="/blog">
-            <article class="entry">
+        @foreach ($news as $n )
+        <div class="col-lg-6">
+        <a href="/news/{{$n->id}}">
+          <article class="entry">
 
-              <div class="entry-img">
-                <img src="frontend/assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
-              </div>
-              <p style="color: black"> Bangladesh: Drop charges against journalist Rozina Islam</p>
-            
-              <div class="entry-meta">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                </ul>
-              </div>
-    
-              <div class="entry-content">
+            <div class="entry-img">
+              <img src="{{URL::asset('newsimg')}}/{{$n->image}}" alt="" class="img-fluid">
+            </div>
+            <p style="color: black"> {{$n->title}}</p>
+          
+            <div class="entry-meta">
+              <ul>
+                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">Rozina Islam</a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">{{$n->created_at->diffForHumans()}}</time></a></li>
+              </ul>
+            </div>
   
-                <div class="read-more">
-                  <a href="/blog">Read More</a>
-                </div>
-              </div>
-    
-            </article>
-          </a>
-         </div>
-         <div class="col-lg-6">
-          <a href="/blog">
-            <article class="entry">
+            <div class="entry-content">
 
-              <div class="entry-img">
-                <img src="frontend/assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+              <div class="read-more">
+                <a href="/news/{{$n->id}}">Read More</a>
               </div>
-              <p style="color: black"> Bangladesh: Drop charges against journalist Rozina Islam</p>
-            
-              <div class="entry-meta">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                </ul>
-              </div>
-    
-              <div class="entry-content">
+            </div>
   
-                <div class="read-more">
-                  <a href="/blog">Read More</a>
-                </div>
-              </div>
-    
-            </article>
-          </a>
-         </div>
-         <div class="col-lg-6">
-          <a href="/blog">
-            <article class="entry">
-
-              <div class="entry-img">
-                <img src="frontend/assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
-              </div>
-              <p style="color: black"> Bangladesh: Drop charges against journalist Rozina Islam</p>
-            
-              <div class="entry-meta">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                </ul>
-              </div>
-    
-              <div class="entry-content">
-  
-                <div class="read-more">
-                  <a href="/blog">Read More</a>
-                </div>
-              </div>
-    
-            </article>
-          </a>
-         </div>
-         <div class="col-lg-6">
-          <a href="/blog">
-            <article class="entry">
-
-              <div class="entry-img">
-                <img src="frontend/assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
-              </div>
-              <p style="color: black"> Bangladesh: Drop charges against journalist Rozina Islam</p>
-            
-              <div class="entry-meta">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                </ul>
-              </div>
-    
-              <div class="entry-content">
-  
-                <div class="read-more">
-                  <a href="/blog">Read More</a>
-                </div>
-              </div>
-    
-            </article>
-          </a>
-         </div>
+          </article>
+        </a>
+        </div>
+      @endforeach
 
        </div>
 
@@ -263,7 +187,7 @@
           <div class="sidebar-item categories">
             <ul>
               @foreach ($categories as  $category)
-                <li><a href="#">{{$category->name}} <span>(14)</span></a></li>
+                <li><a href="#">{{$category->name}} <span>({{$category->news->count()}})</span></a></li>
               @endforeach
              
             </ul>
@@ -271,23 +195,15 @@
 
           <h3 class="sidebar-title">Recent Posts</h3>
           <div class="sidebar-item recent-posts">
-            <div class="post-item clearfix">
-              <img src="frontend/assets/img/blog/blog-recent-1.jpg" alt="">
-              <h4><a href="/post">Nihil blanditiis at in nihil autem</a></h4>
-              <time datetime="2020-01-01">Jan 1, 2020</time>
-            </div>
 
-            <div class="post-item clearfix">
-              <img src="frontend/assets/img/blog/blog-recent-2.jpg" alt="">
-              <h4><a href="/post">Quidem autem et impedit</a></h4>
-              <time datetime="2020-01-01">Jan 1, 2020</time>
-            </div>
-
-            <div class="post-item clearfix">
-              <img src="frontend/assets/img/blog/blog-recent-3.jpg" alt="">
-              <h4><a href="/post">Id quia et et ut maxime similique occaecati ut</a></h4>
-              <time datetime="2020-01-01">Jan 1, 2020</time>
-            </div>
+            @foreach ($blogs as $blog )
+              <div class="post-item clearfix">
+                <img src="{{URL::asset('blogimg')}}/{{$blog->image}}" alt="">
+                <h4><a href="/blog/{{$blog->id}}">{{$blog->title}}</a></h4>
+                <time datetime="2020-01-01">{{$blog->created_at->diffForHumans()}}</time>
+              </div>
+            @endforeach
+           
 
           </div><!-- End sidebar recent posts-->
 

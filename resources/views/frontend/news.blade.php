@@ -14,110 +14,35 @@
      <div class="col-lg-8 entries">
 
       <div class="row">
-        <div class="col-lg-6">
-         <a href="/blog">
-           <article class="entry">
 
-             <div class="entry-img">
-               <img src="frontend/assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
-             </div>
-             <p style="color: black"> Bangladesh: Drop charges against journalist Rozina Islam</p>
-           
-             <div class="entry-meta">
-               <ul>
-                 <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-                 <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-               </ul>
-             </div>
-   
-             <div class="entry-content">
- 
-               <div class="read-more">
-                 <a href="/blog">Read More</a>
-               </div>
-             </div>
-   
-           </article>
-         </a>
-        </div>
-        <div class="col-lg-6">
-         <a href="/blog">
-           <article class="entry">
+        @foreach ($news as $n )
+          <div class="col-lg-6">
+          <a href="/news/{{$n->id}}">
+            <article class="entry">
 
-             <div class="entry-img">
-               <img src="frontend/assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
-             </div>
-             <p style="color: black"> Bangladesh: Drop charges against journalist Rozina Islam</p>
-           
-             <div class="entry-meta">
-               <ul>
-                 <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-                 <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-               </ul>
-             </div>
-   
-             <div class="entry-content">
- 
-               <div class="read-more">
-                 <a href="/blog">Read More</a>
-               </div>
-             </div>
-   
-           </article>
-         </a>
-        </div>
-        <div class="col-lg-6">
-         <a href="/blog">
-           <article class="entry">
-
-             <div class="entry-img">
-               <img src="frontend/assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
-             </div>
-             <p style="color: black"> Bangladesh: Drop charges against journalist Rozina Islam</p>
-           
-             <div class="entry-meta">
-               <ul>
-                 <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-                 <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-               </ul>
-             </div>
-   
-             <div class="entry-content">
- 
-               <div class="read-more">
-                 <a href="/blog">Read More</a>
-               </div>
-             </div>
-   
-           </article>
-         </a>
-        </div>
-        <div class="col-lg-6">
-         <a href="/blog">
-           <article class="entry">
-
-             <div class="entry-img">
-               <img src="frontend/assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
-             </div>
-             <p style="color: black"> Bangladesh: Drop charges against journalist Rozina Islam</p>
-           
-             <div class="entry-meta">
-               <ul>
-                 <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-                 <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-               </ul>
-             </div>
-   
-             <div class="entry-content">
- 
-               <div class="read-more">
-                 <a href="/blog">Read More</a>
-               </div>
-             </div>
-   
-           </article>
-         </a>
-        </div>
+              <div class="entry-img">
+                <img src="{{URL::asset('newsimg')}}/{{$n->image}}" alt="" class="img-fluid">
+              </div>
+              <p style="color: black"> {{$n->title}}</p>
+            
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">Rozina Islam</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">{{$n->created_at->diffForHumans()}}</time></a></li>
+                </ul>
+              </div>
+    
+              <div class="entry-content">
+  
+                <div class="read-more">
+                  <a href="/news/{{$n->id}}">Read More</a>
+                </div>
+              </div>
+    
+            </article>
+          </a>
+          </div>
+        @endforeach
 
       </div>
 
@@ -129,12 +54,9 @@
          <h3 class="sidebar-title">Categories</h3>
          <div class="sidebar-item categories">
            <ul>
-             <li><a href="#">General <span>(25)</span></a></li>
-             <li><a href="#">Lifestyle <span>(12)</span></a></li>
-             <li><a href="#">Travel <span>(5)</span></a></li>
-             <li><a href="#">Design <span>(22)</span></a></li>
-             <li><a href="#">Creative <span>(8)</span></a></li>
-             <li><a href="#">Educaion <span>(14)</span></a></li>
+            @foreach ($categories as  $category)
+            <li><a href="#">{{$category->name}} <span>(14)</span></a></li>
+            @endforeach
            </ul>
          </div><!-- End sidebar categories-->
 
@@ -172,22 +94,7 @@
 
          </div><!-- End sidebar recent posts-->
 
-         <h3 class="sidebar-title">Tags</h3>
-         <div class="sidebar-item tags">
-           <ul>
-             <li><a href="#">App</a></li>
-             <li><a href="#">IT</a></li>
-             <li><a href="#">Business</a></li>
-             <li><a href="#">Mac</a></li>
-             <li><a href="#">Design</a></li>
-             <li><a href="#">Office</a></li>
-             <li><a href="#">Creative</a></li>
-             <li><a href="#">Studio</a></li>
-             <li><a href="#">Smart</a></li>
-             <li><a href="#">Tips</a></li>
-             <li><a href="#">Marketing</a></li>
-           </ul>
-         </div><!-- End sidebar tags-->
+       
 
        </div><!-- End sidebar -->
 

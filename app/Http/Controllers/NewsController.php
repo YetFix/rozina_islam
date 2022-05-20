@@ -32,14 +32,24 @@ class NewsController extends Controller
             'desc'=>'required',
             'type'=>'required',
             'category'=>'required',
+            'news' => 'required|image|mimes:jpeg,png,jpg,gif,svg'
         ]);
-        
-        News::create([
-            'title'=>$request->name,
-            'desc'=>$request->desc,
-            'type'=>$request->type,
-            'category_id'=>$request->category
-        ]);
+        if ($image = $request->file('news')) {
+            $destinationPath = 'newsimg/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            
+            News::create([
+                'title'=>$request->name,
+                'desc'=>$request->desc,
+                'type'=>$request->type,
+                'category_id'=>$request->category,
+                'image'=>$profileImage,
+            ]);
+
+        }
+       
+       
         Toastr::success('Added New news Succesfully ', 'News', ["positionClass" => "toast-top-right"]);
         return redirect('/allnews');
     }
@@ -57,12 +67,36 @@ class NewsController extends Controller
             'category' => 'required'
         ]);
         
-        News::where('id',$id)->update([
-            'title'=>$request->name,
-            'desc'=>$request->desc,
-            'type'=>$request->type,
-            'category_id'=>$request->category,
-        ]);
+        if( $image = $request->file('news')){
+
+            $news= News::find($id);
+   
+            if(File::exists(public_path('newsimg').'/'.$news->image)) {
+                unlink(public_path('newsimg').'/'.$news->image);
+            }
+            $image = $request->file('news');
+            $destinationPath = 'newsimg/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            
+            News::where('id',$id)->update([
+                'title'=>$request->name,
+                'desc'=>$request->desc,
+                'type'=>$request->type,
+                'category_id'=>$request->category,
+                'image'=>$profileImage,
+            ]);
+        }else{
+            $news = News::find($id);
+            News::where('id',$id)->update([
+                'title'=>$request->name,
+                'desc'=>$request->desc,
+                'type'=>$request->type,
+                'category_id'=>$request->category,
+                'image'=>$news->image,
+            ]);
+        }
+    
                    
         Toastr::success('News Updated Succesfully ', 'News', ["positionClass" => "toast-top-right"]);
 
@@ -71,9 +105,19 @@ class NewsController extends Controller
     }
     function delete(Request $request,$id){
         $news= News::find($id);
-    
+        if(File::exists(public_path('newsimg').'/'.$news->image)) {
+            unlink(public_path('newsimg').'/'.$news->image);
+        }
         $news->delete();
         Toastr::success('News deleted Succesfully ', 'News', ["positionClass" => "toast-top-right"]);
         return redirect()->back();
+    }
+
+
+
+    public function newsByCat($id){
+      $bbc=News::where('category_id',$id);
+      $categories=Category::all();
+      return view('frontend.cnews',compact('bbc','categories'));
     }
 }

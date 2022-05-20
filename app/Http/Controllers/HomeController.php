@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Award;
+use App\Models\Blog;
+use App\Models\Certificate;
+use App\Models\News;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +27,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $awards=Award::all();
+        $news=News::all();
+        $certificates=Certificate::all();
+        return view('home',compact('news','awards','certificates'));
     }
 }

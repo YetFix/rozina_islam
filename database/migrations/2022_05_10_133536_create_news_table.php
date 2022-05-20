@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('type');
             $table->longText('desc');
+            $table->string('image');
             $table->bigInteger('category_id')->unsigned();
             $table->timestamps();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');

@@ -10,7 +10,7 @@
             <div class="page-breadcrumb bg-white">
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                       <a href='/news' class="btn btn-primary mb-3">Add New News</a>
+                       <a href='/blog' class="btn btn-primary mb-3">Add New Blog</a>
                     </div>
                     
                 </div>
@@ -29,32 +29,32 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="white-box">
-                            <h3 class="box-title">All News</h3>
+                            <h3 class="box-title">All Blogs</h3>
                             <div class="table-responsive">
                             <table class="table text-nowrap">
                                 <thead>
                                     <tr>
                                         <th class="border-top-0">#</th>
-                                        <th class="border-top-0">News Title</th>
+                                        <th class="border-top-0">Blog Title</th>
                                         
-                                        <th class="border-top-0">News Type</th>
-                                        <th class="border-top-0">News Image</th>
-                                        <th class="border-top-0">News Category</th>
+                                        <th class="border-top-0">Blog Type</th>
+                                        <th class="border-top-0">Blog Image</th>
+                                        <th class="border-top-0">Blog Category</th>
                                         <th class="border-top-0">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @php($i=1)
-                                @foreach ($news as $nw )
+                                @foreach ($blogs as $blog )
                                 <tr>
                                         <td>{{$i++}}</td>
-                                        <td>{{$nw->title}}</td>
-                                        <td>{{$nw->type}}</td>
-                                        <td><img src="{{URL::asset('newsimg')}}/{{$nw->image}}" style="max-width:120px" alt=""/></td>
-                                        <td>{{$nw->category->name}}</td>
+                                        <td>{{$blog->title}}</td>
+                                        <td>{{$blog->type}}</td>
+                                        <td><img src="{{URL::asset('blogimg')}}/{{$blog->image}}" style="max-width:120px" alt=""/></td>
+                                        <td>{{$blog->category->name}}</td>
                                         <td>
-                                        <a class="btn btn-primary" href="{{route('ns.edit',$nw->id)}}">Edit</a>
-                                        <a class="btn btn-danger" href="{{route('ns.del',$nw->id)}}">Delete</a>
+                                        <a class="btn btn-primary" href="{{route('bl.edit',$blog->id)}}">Edit</a>
+                                        <a class="btn btn-danger" href="{{route('bl.del',$blog->id)}}">Delete</a>
                                         </td>
                                     </tr>
                                 @endforeach    

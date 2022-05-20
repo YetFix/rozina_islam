@@ -4,6 +4,7 @@ use App\Models\Award;
 use App\Models\Blog;
 use App\Models\Category;
 use App\Models\Certificate;
+use App\Models\News;
 use App\Models\Slider;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -18,39 +19,67 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
+Auth::routes([
+    'register' => false, // Registration Routes...
+    'reset' => false, // Password Reset Routes...
+    'verify' => false, // Email Verification Routes...
+  ]);
+Route::get('/blog/{id}', function ($id) {
+    $blog=Blog::find($id);
+    $categories=Category::all();
+    return view('frontend.blog',compact('categories','blog'));
+})->name('single_blog');
+Route::get('/news/{id}', function ($id) {
+    $news=News::find($id);
+    $categories=Category::all();
+    return view('frontend.news_single',compact('categories','news'));
+})->name('single_news');
 Route::get('/', function () {
     $sliders= Slider::all();
     $awards= Award::all();
     $certificates= Certificate::all();
+    $news=News::all();
+    $blogs=Blog::all();
     $categories=Category::all();
-    return view('welcome',compact('sliders','awards','certificates','categories'));
+    return view('welcome',compact('sliders','awards','certificates','categories','news','blogs'));
 });
 Route::get('/about', function () {
-    return view('frontend.about');
+    $categories=Category::all();
+    return view('frontend.about',compact('categories'));
 });
-Route::get('/contact', function () {
-    return view('frontend.contact');
+Route::get('/f/contact', function () {
+    $categories=Category::all();
+    return view('frontend.contact',compact('categories'));
 });
-Route::get('/news', function () {
-    return view('frontend.news');
+Route::get('/f/news', function () {
+    $news=News::all();
+    $categories=Category::all();
+    return view('frontend.news',compact('categories','news'));
 });
-Route::get('/blogs', function () {
-    return view('frontend.blogs');
+Route::get('/f/blogs', function () {
+    $categories=Category::all();
+    $blogs=Blog::all();
+    return view('frontend.blogs',compact('categories','blogs'));
 });
 
-Route::get('/awards', function () {
-    return view('frontend.awards');
+Route::get('/f/awards', function () {
+    $categories=Category::all();
+    return view('frontend.awards',compact('categories'));
 });
-Route::get('/certificates', function () {
-    return view('frontend.awards');
+Route::get('/f/certificates', function () {
+    $categories=Category::all();
+    return view('frontend.awards',compact('categories'));
 });
-Route::get('/blog', function () {
-    return view('frontend.blog');
-})->name('single');
+
+
 Route::get('/post', function () {
     return view('frontend.blog');
 })->name('single_news');
 
+//category blog and news
+Route::get('/blog/category/{id}', [App\Http\Controllers\BlogController::class, 'blogBycat'])->name('blogByCat');
+
+Route::get('/news/category/{id}',[App\Http\Controllers\NewsController::class, 'newsBycat'])->name('newsByCat');
 
 
 // backend routes
@@ -60,7 +89,7 @@ Route::get('/certificates',[App\Http\Controllers\CertificateController::class, '
 Route::get('/awards',[App\Http\Controllers\AwardController::class, 'index']);
 Route::get('/allnews',[App\Http\Controllers\NewsController::class, 'index']);
 Route::get('/admins',[App\Http\Controllers\AdminController::class, 'index']);
-Route::get('/admins',[App\Http\Controllers\AdminController::class, 'index']);
+Route::get('/blogs',[App\Http\Controllers\BlogController::class, 'index']);
 Auth::routes();
 
 
@@ -103,6 +132,15 @@ Route::post('create/news',[App\Http\Controllers\NewsController::class, 'store'])
 Route::get('news/edit/{id}',[App\Http\Controllers\NewsController::class, 'edit'])->name('ns.edit');
 Route::put('news/update/{id}',[App\Http\Controllers\NewsController::class, 'update'])->name('ns.update');
 Route::get('news/delete/{id}',[App\Http\Controllers\NewsController::class, 'delete'])->name('ns.del');
+
+
+//blog
+
+Route::get('blog',[App\Http\Controllers\BlogController::class, 'create']);
+Route::post('create/blog',[App\Http\Controllers\BlogController::class, 'store'])->name('bl.store');
+Route::get('blog/edit/{id}',[App\Http\Controllers\BlogController::class, 'edit'])->name('bl.edit');
+Route::put('blog/update/{id}',[App\Http\Controllers\BlogController::class, 'update'])->name('bl.update');
+Route::get('blog/delete/{id}',[App\Http\Controllers\BlogController::class, 'delete'])->name('bl.del');
 
 
 //admins
