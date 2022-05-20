@@ -40,25 +40,31 @@
                                     <img width="42" class="rounded-circle" src="{{asset('backend/assets/images/avatars/2.jpg')}}" alt="">
                                     <i class="fa fa-angle-down ml-2 opacity-8"></i>
                                 </a>
-                                <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
-                                    <button type="button" tabindex="0" class="dropdown-item">User profile</button>
-                                    
+                                <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right"> 
                                     <div tabindex="-1" class="dropdown-divider"></div>
-                                    <button type="button" tabindex="0" class="dropdown-item">Logout</button>
+                                   
+                                  
+
+                                    <li class="sidebar-item">
+                                        <a class="sidebar-link waves-effect waves-dark sidebar-link mx-auto btn btn-lg" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+                                            aria-expanded="false">
+                                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                            <span class="hide-menu">Logout</span>
+                                        </a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
                                 </div>
                             </div>
                         </div>
                         <div class="widget-content-left  ml-3 header-user-info">
                             <div class="widget-heading">
-                                Alina Mclourd{{Auth::user()->username}}
+                                <span>{{Auth::user()->name}}</span>
                             </div>
                           
                         </div>
-                        <div class="widget-content-right header-user-info ml-3">
-                            <button type="button" class="btn-shadow p-1 btn btn-primary btn-sm show-toastr-example">
-                                <i class="fa text-white fa-calendar pr-1 pl-1"></i>
-                            </button>
-                        </div>
+                       
                     </div>
                 </div>
             </div>        

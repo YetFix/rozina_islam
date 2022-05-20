@@ -26,10 +26,14 @@
     <link href="{{asset('frontend/assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
     <link href="{{asset('frontend/assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
     <link href="{{asset('frontend/assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
-  
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/owl.carousel.min.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/owl.theme.default.min.css')}}" rel="stylesheet">
     <!-- Template Main CSS File -->
     <link rel="stylesheet" href="{{asset('frontend/assets/css/style.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/variables.css')}}" rel="stylesheet">
+
+
+
   
    
   </head>

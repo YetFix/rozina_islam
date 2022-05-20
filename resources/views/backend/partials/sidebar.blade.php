@@ -34,62 +34,57 @@
             <ul class="vertical-nav-menu">
             
                 <li>
-                    <a href="/home" class="mm-active">
+                    <a href="/home" class="@if (url()->current() == '/home')
+                       mm-active
+                    @endif">
                         <i class="metismenu-icon pe-7s-rocket"></i>
                         Dashboard
                     </a>
                 </li>
                
                 <li>
-                    <a href="#">
-                        <i class="metismenu-icon pe-7s-diamond"></i>
-                        News English
+                    <a href="#" @if (url()->current() == '/allnews')
+                        mm-active
+                     @endif>
+                        <i class="metismenu-icon pe-7s-mouse"></i>
+                        News
                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                     </a>
                     <ul>
                         <li>
-                            <a href="elements-buttons-standard.html">
+                            <a href="/allnews">
                                 <i class="metismenu-icon"></i>
-                                All English News 
+                                All News 
                             </a>
                         </li>
                      
                     </ul>
                 </li>
-                <li>
-                    <a href="#">
-                        <i class="metismenu-icon pe-7s-car"></i>
-                        News Bengali
-                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                    </a>
-                    <ul>
-                        <li>
-                            <a href="components-tabs.html">
-                                <i class="metismenu-icon">
-                                </i>All Bengali News
-                            </a>
-                        </li>
-                        
-                    </ul>
-                </li>
+                
               
                 <li>
                     <a href="#">
-                        <i class="metismenu-icon pe-7s-car"></i>
+                        <i class="metismenu-icon pe-7s-eyedropper"></i>
                        Settings
                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                     </a>
                     <ul>
                         <li>
-                            <a href="components-tabs.html">
+                            <a href="/sliders">
                                 <i class="metismenu-icon">
-                                </i>Tags
+                                </i>Sliders
                             </a>
                         </li>
                         <li>
-                            <a href="components-tabs.html">
+                            <a href="/categories">
                                 <i class="metismenu-icon">
                                 </i>Categories
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/admins">
+                                <i class="metismenu-icon">
+                                </i>Admins
                             </a>
                         </li>
                     </ul>
@@ -102,7 +97,7 @@
                     </a>
                     <ul>
                         <li>
-                            <a href="components-tabs.html">
+                            <a href="/certificates">
                                 <i class="metismenu-icon">
                                 </i>All Certificates
                             </a>
@@ -112,15 +107,15 @@
                 </li>
                 <li>
                     <a href="#">
-                        <i class="metismenu-icon pe-7s-car"></i>
-                        Gallery
+                        <i class="metismenu-icon pe-7s-pendrive"></i>
+                        Awards
                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                     </a>
                     <ul>
                         <li>
-                            <a href="components-tabs.html">
+                            <a href="/awards">
                                 <i class="metismenu-icon">
-                                </i>All Photos and Videos
+                                </i>All Awards
                             </a>
                         </li>
                         

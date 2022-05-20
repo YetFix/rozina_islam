@@ -11,6 +11,7 @@
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
     <meta name="msapplication-tap-highlight" content="no">
     <link href="{{asset('backend/main.css')}}" rel="stylesheet"></head>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
 <body>
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
         @include('backend.partials.topbar')   
@@ -27,5 +28,15 @@
         </div>
     </div>
     <script type="text/javascript" src="{{asset('backend/assets/scripts/main.js')}}"></script>
+    <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#desc' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
+        {!! Toastr::message() !!}
 </body>
 </html>
