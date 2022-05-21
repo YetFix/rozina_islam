@@ -24,9 +24,8 @@
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">Rozina Islam</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">{{$blog->created_at->diffForHumans()}}</time></a></li>
-                  ]
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="/blog/{{$blog->id}}">Rozina Islam</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="/blog/{{$blog->id}}"><time datetime="2020-01-01">{{$blog->created_at->diffForHumans()}}</time></a></li>
                 </ul>
               </div>
 
@@ -77,7 +76,7 @@
               <div class="sidebar-item categories">
                 <ul>
                    @foreach ($categories as  $category)
-                  <li><a href="#">{{$category->name}} <span>(14)</span></a></li>
+                  <li><a href="/blog/category/{{$category->id}}">{{$category->name}} <span>({{$category->blogs->count()}})</span></a></li>
                   @endforeach
                 </ul>
               </div><!-- End sidebar categories-->

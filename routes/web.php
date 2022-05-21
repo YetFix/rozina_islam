@@ -72,14 +72,20 @@ Route::get('/f/certificates', function () {
 });
 
 
-Route::get('/post', function () {
-    return view('frontend.blog');
-})->name('single_news');
-
 //category blog and news
-Route::get('/blog/category/{id}', [App\Http\Controllers\BlogController::class, 'blogBycat'])->name('blogByCat');
+Route::get('/blog/category/{id}', function($id){
+    $categories=Category::all();
+    $category=Category::find($id);
+    $blogs= $category->blogs;
+    return view('frontend.cblog',compact('blogs','categories','category'));
+})->name('blogByCat');
 
-Route::get('/news/category/{id}',[App\Http\Controllers\NewsController::class, 'newsBycat'])->name('newsByCat');
+Route::get('/news/category/{id}',function($id){
+    $categories=Category::all();
+    $category=Category::find($id);
+    $bbc= $category->news;
+    return view('frontend.cnews',compact('bbc','categories','category'));
+})->name('newsByCat');
 
 
 // backend routes

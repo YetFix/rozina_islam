@@ -159,8 +159,8 @@
           
             <div class="entry-meta">
               <ul>
-                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">Rozina Islam</a></li>
-                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">{{$n->created_at->diffForHumans()}}</time></a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="/news/{{$n->id}}">Rozina Islam</a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="/news/{{$n->id}}"><time datetime="2020-01-01">{{$n->created_at->diffForHumans()}}</time></a></li>
               </ul>
             </div>
   
@@ -187,7 +187,7 @@
           <div class="sidebar-item categories">
             <ul>
               @foreach ($categories as  $category)
-                <li><a href="#">{{$category->name}} <span>({{$category->news->count()}})</span></a></li>
+                <li><a href="/news/category/{{$category->id}}">{{$category->name}} <span>({{$category->news->count()}})</span></a></li>
               @endforeach
              
             </ul>

@@ -12,7 +12,9 @@ class NewsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth',['except' => [
+            'newsByCat'
+        ]]);
     }
     function index(){
         $news = News::all();
@@ -115,9 +117,5 @@ class NewsController extends Controller
 
 
 
-    public function newsByCat($id){
-      $bbc=News::where('category_id',$id);
-      $categories=Category::all();
-      return view('frontend.cnews',compact('bbc','categories'));
-    }
+    
 }
